@@ -8,6 +8,11 @@ pipeline {
           sh 'checkov --version'
          }
        }
+    stage('analyze compliant') {
+      steps {
+          sh 'checkov -d compliant'
+        }
+      }
      }
    }
  
