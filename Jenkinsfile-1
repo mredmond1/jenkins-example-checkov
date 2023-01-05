@@ -10,7 +10,7 @@ pipeline {
        }
     stage('analyze compliant') {
       steps {
-          sh 'checkov -d compliant'
+          sh 'checkov -d compliant --quiet'
         }
       }
      }
