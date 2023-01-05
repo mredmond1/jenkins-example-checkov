@@ -1,12 +1,10 @@
 pipeline {
   agent {
     docker { image 'bridgecrew/checkov:latest' }
-    }
   }
   stages {
     stage('verify version') {
       steps {
-        container('checkov') {
           sh 'checkov --version'
          }
        }
