@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('verify version') {
       steps {
-          sh 'checkov -d https://github.com/mredmond1/jenkins-example-checkov/compliant --quiet'
+          sh 'checkov -d compliant --quiet'
          }
        }
      }
