@@ -8,8 +8,9 @@ pipeline {
       steps {
         container('checkov') {
           sh 'checkov --version'
-        }
-      }
-    }
-  }
+         }
+       }
+     }
+   }
+ }
   
