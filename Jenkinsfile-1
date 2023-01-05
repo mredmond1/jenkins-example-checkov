@@ -6,13 +6,9 @@ pipeline {
     stage('verify version') {
       steps {
           sh 'checkov --version'
+          sh 'checkov -d compliant --quiet'
          }
        }
-    stage('analyze compliant') {
-      steps {
-          sh 'checkov -d compliant --quiet'
-        }
-      }
      }
    }
  
