@@ -1,7 +1,6 @@
 pipeline {
   agent {
     docker { image: bridgecrew/checkov }
-      yaml '''
     }
   }
   stages {
@@ -9,13 +8,6 @@ pipeline {
       steps {
         container('checkov') {
           sh 'checkov --version'
-        }
-      }
-    }
-    stage('check the help') {
-      steps {
-        container('checkov') {
-          sh 'checkov --help'
         }
       }
     }
