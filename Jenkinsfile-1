@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image: bridgecrew/checkov:latest }
+    docker { image: bridgecrew/checkov }
       yaml '''
     }
   }
